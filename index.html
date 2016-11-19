@@ -22,9 +22,16 @@
   <body ng-app="clockApp">
     <div class="container" ng-controller="clockCtrl">
       <div class="row">
-        <button ng-click="incrementTime()">(+)</button>
-        <button ng-click="decrementTime()">(-)</button>
-        <h1>{{timer}}</h1>
+        <button ng-click="increaseTime()">(+)</button>
+        <button ng-click="decreaseTime()">(-)</button>
+        <form name="myForm">
+          <input type="radio" ng-model="check" value="hour">
+          <input type="radio" ng-model="check" value="min">
+          <input type="radio" ng-model="check" value="sec">
+          {{check}}          
+        </form>
+        <h1>{{hours}}:{{tenMin}}{{minute}}:{{tenSec}}{{second}}</h1>
+        <button ng-click="timer()">Start</button>
       </div>
     </div>
   </body>
