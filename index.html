@@ -19,19 +19,77 @@
     <!-- local js file -->
      <script src="app.js"></script>
   </head>
-  <body ng-app="clockApp">
-    <div class="container" ng-controller="clockCtrl">
-      <div class="row">
-        <button ng-click="increaseTime()">(+)</button>
-        <button ng-click="decreaseTime()">(-)</button>
-        <form name="myForm">
-          <input type="radio" ng-model="check" value="hour">
-          <input type="radio" ng-model="check" value="min">
-          <input type="radio" ng-model="check" value="sec">
-          {{check}}          
-        </form>
-        <h1>{{hours}}:{{tenMin}}{{minute}}:{{tenSec}}{{second}}</h1>
-        <button ng-click="timer()">Start</button>
+  <body ng-app="clockApp" class="text-center">
+    <div class="container-fluid" ng-controller="clockCtrl">
+      <div class="row border">
+        <div class="col-xs-2 border">
+          <button class="btn border btn-info" ng-click="increaseTimer()">(+)</button>  
+        </div>
+        <div class="col-xs-8 border">
+          <div class="box border">
+            <form name="myForm">
+              <ul class="col-xs-12">
+                <li class="col-xs-4">
+                  <input id="htc-option" type="radio" ng-model="timerCheck" value="hour">
+                  <label for="htc-option">Hours</label>
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-4">
+                  <input id="mtc-option" type="radio" ng-model="timerCheck" value="min">
+                  <label for="mtc-option">Minutes</label>
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-4">
+                  <input id="stc-option" type="radio" ng-model="timerCheck" value="sec">
+                  <label for="stc-option">Seconds</label>
+                  <div class="check"></div>
+                </li>         
+              </ul>          
+            </form>
+            <h1>{{timerHours}}:{{timerTenMin}}{{timerMinute}}:{{timerTenSec}}{{timerSecond}}</h1>
+          </div>
+        </div>
+        <div class="col-xs-2 border">
+          <button class="btn border btn-warning" ng-click="decreaseTimer()">(-)</button border>
+        </div>
+      </div>
+      <div class="row border">
+        <div class="col-xs-2 border">
+          <button class="btn border btn-info" ng-click="increaseBreak()">(+)</button>  
+        </div>
+        <div class="col-xs-8 border">
+          <div class="box border">
+            <form name="otherForm">
+              <ul class="col-xs-12">
+                <li class="col-xs-4">
+                  <input id="hbc-option" type="radio" ng-model="breakCheck" value="hour">
+                  <label for="hbc-option">Hours</label>
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-4">
+                  <input id="mbc-option" type="radio" ng-model="breakCheck" value="min">
+                  <label for="mbc-option">Minutes</label>
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-4">
+                  <input id="sbc-option" type="radio" ng-model="breakCheck" value="sec">
+                  <label for="sbc-option">Seconds</label>
+                  <div class="check"></div>
+                </li>         
+              </ul>
+            </form>
+            <h1>{{breakHours}}:{{breakTenMin}}{{breakMinute}}:{{breakTenSec}}{{breakSecond}}</h1>
+          </div>
+        </div>
+        <div class="col-xs-2 border">
+          <button class="btn border btn-warning" ng-click="decreaseBreak()">(-)</button>  
+        </div>
+      </div>
+      <div class="row border">
+        <div class="buttons border">
+          <button class="btn border btn-success" ng-click="timer()">Start</button>
+          <button class="btn border btn-danger" ng-click="stopTimer()">Stop</button>
+        </div>
       </div>
     </div>
   </body>
