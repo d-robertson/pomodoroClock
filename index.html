@@ -21,12 +21,12 @@
   </head>
   <body ng-app="clockApp" class="text-center">
     <div class="container-fluid" ng-controller="clockCtrl">
-      <div class="row border">
-        <div class="col-xs-2 border">
-          <button class="btn border btn-info" ng-click="increaseTimer()">(+)</button>  
+      <div class="row ">
+        <div class="col-xs-2 ">
+          <button class="btn  btn-info" ng-click="increaseTimer()">(+)</button>  
         </div>
-        <div class="col-xs-8 border">
-          <div class="box border">
+        <div class="col-xs-8 ">
+          <div class="box ">
             <form name="myForm">
               <ul class="col-xs-12">
                 <li class="col-xs-4">
@@ -49,16 +49,16 @@
             <h1>{{timerHours}}:{{timerTenMin}}{{timerMinute}}:{{timerTenSec}}{{timerSecond}}</h1>
           </div>
         </div>
-        <div class="col-xs-2 border">
-          <button class="btn border btn-warning" ng-click="decreaseTimer()">(-)</button border>
+        <div class="col-xs-2 ">
+          <button class="btn  btn-warning" ng-click="decreaseTimer()">(-)</button >
         </div>
       </div>
-      <div class="row border">
-        <div class="col-xs-2 border">
-          <button class="btn border btn-info" ng-click="increaseBreak()">(+)</button>  
+      <div class="row ">
+        <div class="col-xs-2 ">
+          <button class="btn  btn-info" ng-click="increaseBreak()">(+)</button>  
         </div>
-        <div class="col-xs-8 border">
-          <div class="box border">
+        <div class="col-xs-8 ">
+          <div class="box ">
             <form name="otherForm">
               <ul class="col-xs-12">
                 <li class="col-xs-4">
@@ -81,14 +81,14 @@
             <h1>{{breakHours}}:{{breakTenMin}}{{breakMinute}}:{{breakTenSec}}{{breakSecond}}</h1>
           </div>
         </div>
-        <div class="col-xs-2 border">
-          <button class="btn border btn-warning" ng-click="decreaseBreak()">(-)</button>  
+        <div class="col-xs-2 ">
+          <button class="btn  btn-warning" ng-click="decreaseBreak()">(-)</button>  
         </div>
       </div>
-      <div class="row border">
-        <div class="buttons border">
-          <button class="btn border btn-success" ng-click="timer()">Start</button>
-          <button class="btn border btn-danger" ng-click="stopTimer()">Stop</button>
+      <div class="row ">
+        <div class="buttons ">
+          <button class="btn  btn-success" ng-click="timer()">Start</button>
+          <button class="btn  btn-danger" ng-click="stopTimer()">Stop</button>
         </div>
       </div>
     </div>
