@@ -1,3 +1,18 @@
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .border {
   border: solid black 1px;
 }
@@ -132,4 +147,23 @@ input[type=radio]:checked ~ .check::before{
 input[type=radio]:checked ~ label{
   color: #0DFF92;
 }
+
+.fillGuage {
+  position: absolute;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+}
+
+.guage {
+  position: absolute;
+  z-index: 2;
+  height: 50px;
+  background-color: #0DFF92;
+  animation-name: fill;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+}
+
 
